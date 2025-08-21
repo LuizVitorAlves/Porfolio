@@ -56,7 +56,7 @@ export function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
-            About <span className="text-[var(--vibrant)]">Me</span>
+            About <span className="text-vibrant">Me</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Learn more about my journey, skills, and what drives me as a developer.
@@ -92,7 +92,7 @@ export function AboutPage() {
             </div>
             
             <div className="mt-8">
-              <Button className="bg-[var(--vibrant)] hover:bg-[var(--vibrant)]/90 text-[var(--vibrant-foreground)]">
+              <Button className="bg-vibrant hover:bg-vibrant/90 text-vibrant-foreground">
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </Button>
@@ -110,7 +110,7 @@ export function AboutPage() {
                 />
               </div>
               {/* Decorative gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--vibrant)]/20 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-vibrant/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
         </div>
@@ -127,14 +127,14 @@ export function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skillGroup) => (
-            <Card key={skillGroup.category} className="border-border hover:border-[var(--vibrant)]/50 transition-colors">
+            <Card key={skillGroup.category} className="border-border hover:border-vibrant/50 transition-colors">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-primary mb-4">{skillGroup.category}</h3>
                 <div className="space-y-2">
                   {skillGroup.technologies.map((tech) => (
                     <div
                       key={tech}
-                      className="px-3 py-2 bg-accent text-accent-foreground rounded-md text-sm font-medium hover:bg-[var(--vibrant)]/10 hover:text-[var(--vibrant)] transition-colors cursor-default"
+                      className="px-3 py-2 bg-accent text-accent-foreground rounded-md text-sm font-medium hover:bg-vibrant/10 hover:text-vibrant transition-colors cursor-default"
                     >
                       {tech}
                     </div>
@@ -161,7 +161,7 @@ export function AboutPage() {
             return (
               <Card 
                 key={link.platform} 
-                className="group border-border hover:border-[var(--vibrant)] hover:shadow-lg transition-all duration-300 cursor-pointer"
+                className="group border-border hover:border-vibrant hover:shadow-lg transition-all duration-300 cursor-pointer"
               >
                 <CardContent className="p-6 text-center">
                   <a
@@ -170,10 +170,10 @@ export function AboutPage() {
                     rel={link.platform !== 'Email' ? 'noopener noreferrer' : undefined}
                     className="block"
                   >
-                    <div className="w-12 h-12 bg-[var(--vibrant)]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[var(--vibrant)] transition-colors">
-                      <IconComponent className="h-6 w-6 text-[var(--vibrant)] group-hover:text-[var(--vibrant-foreground)] transition-colors" />
+                    <div className="w-12 h-12 bg-vibrant/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-vibrant transition-colors">
+                      <IconComponent className="h-6 w-6 text-vibrant group-hover:text-vibrant-foreground transition-colors" />
                     </div>
-                    <h3 className="font-semibold text-primary group-hover:text-[var(--vibrant)] transition-colors mb-1">
+                    <h3 className="font-semibold text-primary group-hover:text-vibrant transition-colors mb-1">
                       {link.platform}
                     </h3>
                     <p className="text-sm text-muted-foreground">

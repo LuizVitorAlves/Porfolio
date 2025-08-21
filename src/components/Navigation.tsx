@@ -28,7 +28,7 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
           {/* Logo */}
           <button
             onClick={() => handleNavClick('home')}
-            className="text-xl font-semibold text-primary hover:text-[var(--vibrant)] transition-colors"
+            className="text-xl font-semibold text-primary hover:text-vibrant transition-colors"
           >
             Lalves-d
           </button>
@@ -41,8 +41,8 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
                 onClick={() => handleNavClick(item.id)}
                 className={`px-3 py-2 rounded-md transition-colors ${
                   currentPage === item.id
-                    ? 'text-[var(--vibrant)] bg-[var(--vibrant)]/10'
-                    : 'text-foreground hover:text-[var(--vibrant)]'
+                    ? 'text-vibrant bg-vibrant/10'
+                    : 'text-foreground hover:text-vibrant'
                 }`}
               >
                 {item.label}
@@ -53,7 +53,7 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-md text-foreground hover:text-[var(--vibrant)] hover:bg-accent transition-colors"
+            className="md:hidden p-2 rounded-md text-foreground hover:text-vibrant hover:bg-accent transition-colors"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -69,8 +69,8 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
                   onClick={() => handleNavClick(item.id)}
                   className={`px-3 py-2 rounded-md text-left transition-colors ${
                     currentPage === item.id
-                      ? 'text-[var(--vibrant)] bg-[var(--vibrant)]/10'
-                      : 'text-foreground hover:text-[var(--vibrant)] hover:bg-accent'
+                      ? 'text-vibrant bg-vibrant/10'
+                      : 'text-foreground hover:text-vibrant hover:bg-accent'
                   }`}
                 >
                   {item.label}

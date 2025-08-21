@@ -59,7 +59,7 @@ export function ContactPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
-            Get In <span className="text-[var(--vibrant)]">Touch</span>
+            Get In <span className="text-vibrant">Touch</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             I'm always open to discussing new opportunities, creative projects, or just having a conversation about technology. 
@@ -81,12 +81,12 @@ export function ContactPage() {
           {contactInfo.map((info) => {
             const IconComponent = info.icon
             const content = (
-              <Card className="group border-border hover:border-[var(--vibrant)] hover:shadow-lg transition-all duration-300 h-full">
+              <Card className="group border-border hover:border-vibrant hover:shadow-lg transition-all duration-300 h-full">
                 <CardContent className="p-6 text-center h-full flex flex-col justify-center">
-                  <div className="w-12 h-12 bg-[var(--vibrant)]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[var(--vibrant)] transition-colors">
-                    <IconComponent className="h-6 w-6 text-[var(--vibrant)] group-hover:text-[var(--vibrant-foreground)] transition-colors" />
+                  <div className="w-12 h-12 bg-vibrant/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-vibrant transition-colors">
+                    <IconComponent className="h-6 w-6 text-vibrant group-hover:text-vibrant-foreground transition-colors" />
                   </div>
-                  <h3 className="font-semibold text-primary mb-2 group-hover:text-[var(--vibrant)] transition-colors">
+                  <h3 className="font-semibold text-primary mb-2 group-hover:text-vibrant transition-colors">
                     {info.label}
                   </h3>
                   <p className="text-muted-foreground">
@@ -129,12 +129,12 @@ export function ContactPage() {
                 rel="noopener noreferrer"
                 className="group block"
               >
-                <Card className="border-border hover:border-[var(--vibrant)] hover:shadow-lg transition-all duration-300">
+                <Card className="border-border hover:border-vibrant hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 bg-[var(--vibrant)]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[var(--vibrant)] transition-colors">
-                      <IconComponent className="h-8 w-8 text-[var(--vibrant)] group-hover:text-[var(--vibrant-foreground)] transition-colors" />
+                    <div className="w-16 h-16 bg-vibrant/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-vibrant transition-colors">
+                      <IconComponent className="h-8 w-8 text-vibrant group-hover:text-vibrant-foreground transition-colors" />
                     </div>
-                    <h3 className="text-xl font-semibold text-primary mb-2 group-hover:text-[var(--vibrant)] transition-colors">
+                    <h3 className="text-xl font-semibold text-primary mb-2 group-hover:text-vibrant transition-colors">
                       {platform.name}
                     </h3>
                     <p className="text-muted-foreground">
@@ -150,7 +150,7 @@ export function ContactPage() {
 
       {/* Call to Action */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-[var(--vibrant)]/10 to-[var(--vibrant)]/5 rounded-2xl p-8 sm:p-12 text-center">
+        <div className="bg-gradient-to-r from-vibrant/10 to-vibrant/5 rounded-2xl p-8 sm:p-12 text-center">
           <h2 className="text-3xl font-bold text-primary mb-4">
             Ready to work together?
           </h2>
@@ -161,7 +161,7 @@ export function ContactPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:luiz@example.com"
-              className="inline-flex items-center justify-center px-8 py-3 bg-[var(--vibrant)] hover:bg-[var(--vibrant)]/90 text-[var(--vibrant-foreground)] rounded-lg font-medium transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 bg-vibrant hover:bg-vibrant/90 text-vibrant-foreground rounded-lg font-medium transition-colors"
             >
               <Mail className="mr-2 h-4 w-4" />
               Send me an email
@@ -170,7 +170,7 @@ export function ContactPage() {
               href="https://linkedin.com/in/luiz"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3 border border-[var(--vibrant)] text-[var(--vibrant)] hover:bg-[var(--vibrant)] hover:text-[var(--vibrant-foreground)] rounded-lg font-medium transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 border border-vibrant text-vibrant hover:bg-vibrant hover:text-vibrant-foreground rounded-lg font-medium transition-colors"
             >
               <Linkedin className="mr-2 h-4 w-4" />
               Connect on LinkedIn

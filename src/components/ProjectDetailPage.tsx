@@ -59,7 +59,7 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
         <Button
           variant="outline"
           onClick={onBack}
-          className="border-[var(--vibrant)] text-[var(--vibrant)] hover:bg-[var(--vibrant)] hover:text-[var(--vibrant-foreground)]"
+          className="border-vibrant text-vibrant hover:bg-vibrant hover:text-vibrant-foreground"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Projects
@@ -83,7 +83,7 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
           {/* Project Info */}
           <div className="order-1 lg:order-2">
             <div className="mb-4">
-              <span className="inline-block px-3 py-1 text-sm font-medium bg-[var(--vibrant)]/10 text-[var(--vibrant)] rounded-full">
+              <span className="inline-block px-3 py-1 text-sm font-medium bg-vibrant/10 text-vibrant rounded-full">
                 {project.category}
               </span>
             </div>
@@ -99,15 +99,15 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
             {/* Project Meta */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Calendar className="h-4 w-4 text-[var(--vibrant)]" />
+                <Calendar className="h-4 w-4 text-vibrant" />
                 <span className="text-sm">{projectDetails.duration}</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <User className="h-4 w-4 text-[var(--vibrant)]" />
+                <User className="h-4 w-4 text-vibrant" />
                 <span className="text-sm">{projectDetails.team}</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Tag className="h-4 w-4 text-[var(--vibrant)]" />
+                <Tag className="h-4 w-4 text-vibrant" />
                 <span className="text-sm">{projectDetails.role}</span>
               </div>
             </div>
@@ -131,7 +131,7 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
             <div className="flex gap-4">
               {project.liveUrl && (
                 <Button
-                  className="bg-[var(--vibrant)] hover:bg-[var(--vibrant)]/90 text-[var(--vibrant-foreground)]"
+                  className="bg-vibrant hover:bg-vibrant/90 text-vibrant-foreground"
                   onClick={() => window.open(project.liveUrl, '_blank')}
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
@@ -141,7 +141,7 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
               {project.githubUrl && (
                 <Button
                   variant="outline"
-                  className="border-[var(--vibrant)] text-[var(--vibrant)] hover:bg-[var(--vibrant)] hover:text-[var(--vibrant-foreground)]"
+                  className="border-vibrant text-vibrant hover:bg-vibrant hover:text-vibrant-foreground"
                   onClick={() => window.open(project.githubUrl, '_blank')}
                 >
                   <Github className="mr-2 h-4 w-4" />
@@ -163,7 +163,7 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
               <ul className="space-y-2">
                 {projectDetails.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-2 text-muted-foreground">
-                    <div className="w-1.5 h-1.5 bg-[var(--vibrant)] rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-vibrant rounded-full mt-2 flex-shrink-0"></div>
                     <span className="text-sm">{feature}</span>
                   </li>
                 ))}
@@ -192,7 +192,7 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
               <ul className="space-y-2">
                 {projectDetails.learnings.map((learning, index) => (
                   <li key={index} className="flex items-start gap-2 text-muted-foreground">
-                    <div className="w-1.5 h-1.5 bg-[var(--vibrant)] rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-vibrant rounded-full mt-2 flex-shrink-0"></div>
                     <span className="text-sm">{learning}</span>
                   </li>
                 ))}

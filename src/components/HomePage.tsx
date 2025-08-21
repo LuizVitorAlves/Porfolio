@@ -74,7 +74,7 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 flex items-center min-h-screen lg:min-h-[80vh]">
           <div className="max-w-2xl">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Olá, me chamo <span className="text-[var(--vibrant)]">Luiz</span>
+              Olá, me chamo <span className="text-vibrant">Luiz</span>
             </h1>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary mb-8">
               Sou um Engenheiro de Software apaixonado por criar soluções digitais inovadoras
@@ -86,7 +86,7 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={onNavigateToProjects}
-                className="bg-[var(--vibrant)] hover:bg-[var(--vibrant)]/90 text-[var(--vibrant-foreground)] px-8 py-4 text-lg"
+                className="bg-vibrant hover:bg-vibrant/90 text-vibrant-foreground px-8 py-4 text-lg"
               >
                 Ver Projetos
               </Button>
@@ -111,11 +111,11 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
           {skills.map((skill, index) => (
             <div 
               key={index}
-              className="group p-8 bg-card border border-border rounded-xl hover:border-[var(--vibrant)]/50 hover:shadow-lg transition-all duration-300"
+              className="group p-8 bg-card border border-border rounded-xl hover:border-vibrant/50 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-[var(--vibrant)]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[var(--vibrant)]/20 transition-colors">
-                  <skill.icon className="h-8 w-8 text-[var(--vibrant)]" />
+                <div className="w-16 h-16 bg-vibrant/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-vibrant/20 transition-colors">
+                  <skill.icon className="h-8 w-8 text-vibrant" />
                 </div>
                 <h3 className="text-xl font-semibold text-primary mb-3">
                   {skill.title}
@@ -127,7 +127,7 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
                   {skill.skills.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 text-sm bg-muted text-muted-foreground rounded-full group-hover:bg-[var(--vibrant)]/10 group-hover:text-[var(--vibrant)] transition-colors"
+                      className="px-3 py-1 text-sm bg-muted text-muted-foreground rounded-full group-hover:bg-vibrant/10 group-hover:text-vibrant transition-colors"
                     >
                       {tech}
                     </span>
@@ -158,7 +158,7 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
             {companies.map((company, index) => (
               <div
                 key={`first-${index}`}
-                className="flex-shrink-0 w-32 h-20 mx-4 flex items-center justify-center bg-card border border-border rounded-lg hover:border-[var(--vibrant)]/50 hover:shadow-lg transition-all duration-300 group"
+                className="flex-shrink-0 w-32 h-20 mx-4 flex items-center justify-center bg-card border border-border rounded-lg hover:border-vibrant/50 hover:shadow-lg transition-all duration-300 group"
               >
                 <ImageWithFallback
                   src={company.logo}
@@ -171,7 +171,7 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
             {companies.map((company, index) => (
               <div
                 key={`second-${index}`}
-                className="flex-shrink-0 w-32 h-20 mx-4 flex items-center justify-center bg-card border border-border rounded-lg hover:border-[var(--vibrant)]/50 hover:shadow-lg transition-all duration-300 group"
+                className="flex-shrink-0 w-32 h-20 mx-4 flex items-center justify-center bg-card border border-border rounded-lg hover:border-vibrant/50 hover:shadow-lg transition-all duration-300 group"
               >
                 <ImageWithFallback
                   src={company.logo}
@@ -198,30 +198,30 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
         <div className="flex flex-wrap justify-center gap-6">
           <a
             href="mailto:luiz@example.com"
-            className="flex items-center gap-3 px-6 py-3 bg-card border border-border rounded-lg hover:border-[var(--vibrant)] hover:shadow-lg transition-all duration-300 group"
+            className="flex items-center gap-3 px-6 py-3 bg-card border border-border rounded-lg hover:border-vibrant hover:shadow-lg transition-all duration-300 group"
           >
-            <Mail className="h-5 w-5 text-[var(--vibrant)] group-hover:scale-110 transition-transform" />
-            <span className="text-foreground group-hover:text-[var(--vibrant)] transition-colors">Email</span>
+            <Mail className="h-5 w-5 text-vibrant group-hover:scale-110 transition-transform" />
+            <span className="text-foreground group-hover:text-vibrant transition-colors">Email</span>
           </a>
           
           <a
             href="https://linkedin.com/in/luiz"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-6 py-3 bg-card border border-border rounded-lg hover:border-[var(--vibrant)] hover:shadow-lg transition-all duration-300 group"
+            className="flex items-center gap-3 px-6 py-3 bg-card border border-border rounded-lg hover:border-vibrant hover:shadow-lg transition-all duration-300 group"
           >
-            <Linkedin className="h-5 w-5 text-[var(--vibrant)] group-hover:scale-110 transition-transform" />
-            <span className="text-foreground group-hover:text-[var(--vibrant)] transition-colors">LinkedIn</span>
+            <Linkedin className="h-5 w-5 text-vibrant group-hover:scale-110 transition-transform" />
+            <span className="text-foreground group-hover:text-vibrant transition-colors">LinkedIn</span>
           </a>
           
           <a
             href="https://github.com/luiz"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-6 py-3 bg-card border border-border rounded-lg hover:border-[var(--vibrant)] hover:shadow-lg transition-all duration-300 group"
+            className="flex items-center gap-3 px-6 py-3 bg-card border border-border rounded-lg hover:border-vibrant hover:shadow-lg transition-all duration-300 group"
           >
-            <Github className="h-5 w-5 text-[var(--vibrant)] group-hover:scale-110 transition-transform" />
-            <span className="text-foreground group-hover:text-[var(--vibrant)] transition-colors">GitHub</span>
+            <Github className="h-5 w-5 text-vibrant group-hover:scale-110 transition-transform" />
+            <span className="text-foreground group-hover:text-vibrant transition-colors">GitHub</span>
           </a>
         </div>
       </section>

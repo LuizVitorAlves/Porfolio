@@ -78,7 +78,7 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
-            My <span className="text-[var(--vibrant)]">Projects</span>
+            My <span className="text-vibrant">Projects</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Here's a collection of projects I've worked on, ranging from web applications to mobile apps and data visualization tools. 
@@ -96,7 +96,7 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
               variant="outline"
               size="icon"
               onClick={prevProject}
-              className="border-[var(--vibrant)] text-[var(--vibrant)] hover:bg-[var(--vibrant)] hover:text-[var(--vibrant-foreground)]"
+              className="border-vibrant text-vibrant hover:bg-vibrant hover:text-vibrant-foreground"
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
@@ -104,7 +104,7 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
               variant="outline"
               size="icon"
               onClick={nextProject}
-              className="border-[var(--vibrant)] text-[var(--vibrant)] hover:bg-[var(--vibrant)] hover:text-[var(--vibrant-foreground)]"
+              className="border-vibrant text-vibrant hover:bg-vibrant hover:text-vibrant-foreground"
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
@@ -115,7 +115,7 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
             {getVisibleProjects().map((project) => (
               <Card 
                 key={`${project.id}-${project.displayIndex}`}
-                className="group hover:shadow-xl transition-all duration-300 border-border hover:border-[var(--vibrant)]/50 cursor-pointer"
+                className="group hover:shadow-xl transition-all duration-300 border-border hover:border-vibrant/50 cursor-pointer"
                 onClick={() => onProjectClick(project.id)}
               >
                 <div className="aspect-video overflow-hidden rounded-t-lg">
@@ -127,12 +127,12 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
                 </div>
                 <CardContent className="p-6">
                   <div className="mb-3">
-                    <span className="inline-block px-2 py-1 text-xs font-medium bg-[var(--vibrant)]/10 text-[var(--vibrant)] rounded-full">
+                    <span className="inline-block px-2 py-1 text-xs font-medium bg-vibrant/10 text-vibrant rounded-full">
                       {project.category}
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-primary mb-3 group-hover:text-[var(--vibrant)] transition-colors">
+                  <h3 className="text-xl font-semibold text-primary mb-3 group-hover:text-vibrant transition-colors">
                     {project.title}
                   </h3>
                   
@@ -158,7 +158,7 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex-1 border-[var(--vibrant)] text-[var(--vibrant)] hover:bg-[var(--vibrant)] hover:text-[var(--vibrant-foreground)]"
+                        className="flex-1 border-vibrant text-vibrant hover:bg-vibrant hover:text-vibrant-foreground"
                         onClick={(e) => {
                           e.stopPropagation()
                           window.open(project.liveUrl, '_blank')
@@ -196,8 +196,8 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
                 onClick={() => setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all ${
                   index === currentIndex
-                    ? 'bg-[var(--vibrant)] w-8'
-                    : 'bg-border hover:bg-[var(--vibrant)]/50'
+                    ? 'bg-vibrant w-8'
+                    : 'bg-border hover:bg-vibrant/50'
                 }`}
               />
             ))}
