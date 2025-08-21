@@ -10,10 +10,10 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'about', label: 'About' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'home', label: 'Início' },
+    { id: 'projects', label: 'Projetos' },
+    { id: 'about', label: 'Sobre mim' },
+    { id: 'contact', label: 'Contato' }
   ]
 
   const handleNavClick = (pageId: string) => {
@@ -30,7 +30,7 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
             onClick={() => handleNavClick('home')}
             className="text-xl font-semibold text-primary hover:text-vibrant transition-colors"
           >
-            Lalves-d
+            LALVES-D
           </button>
 
           {/* Desktop Navigation */}
