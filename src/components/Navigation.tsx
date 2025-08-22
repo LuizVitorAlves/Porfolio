@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import lalves from "./Images/lalves.png";
 
 interface NavigationProps {
   currentPage: string
@@ -28,9 +29,13 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
           {/* Logo */}
           <button
             onClick={() => handleNavClick('home')}
-            className="text-xl font-semibold text-primary hover:text-vibrant transition-colors"
+            className="hover:opacity-80 transition-opacity"
           >
-            LALVES-D
+            <img 
+              src={lalves}
+              alt="LALVES-D" 
+              className="h-12 w-auto"
+            />
           </button>
 
           {/* Desktop Navigation */}

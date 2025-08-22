@@ -2,6 +2,12 @@ import { Github, Linkedin, Mail, Palette, Code, Users } from "lucide-react"
 import { Button } from "./ui/button"
 import { ImageWithFallback } from "./figma/ImageWithFallback"
 import banner from "./Images/banner.png";
+import ftrio from "./Images/42.png";
+import ufrj from "./Images/UFRJ.png";
+import apitoo from "./Images/Logo original branco.png";
+import loglynx from "./Images/logoLogLynx.png";
+import ejcm from "./Images/ejcm.png";
+import lalves from "./Images/lalves.png";
 
 interface HomePageProps {
   onNavigateToProjects: () => void
@@ -9,28 +15,28 @@ interface HomePageProps {
 
 const companies = [
   {
-    name: "Google",
-    logo: "https://images.unsplash.com/photo-1662947190722-5d272f82a526?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb29nbGUlMjBsb2dvfGVufDF8fHx8MTc1NTYwNzcxMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    name: "42 Rio",
+    logo: ftrio
   },
   {
-    name: "Microsoft",
-    logo: "https://images.unsplash.com/photo-1662947036644-ecfde1221ac7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb3NvZnQlMjBsb2dvfGVufDF8fHx8MTc1NTUzNTE1Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    name: "UFRJ",
+    logo: ufrj
   },
   {
-    name: "Apple",
-    logo: "https://images.unsplash.com/photo-1680530033206-881e0a7e44b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcHBsZSUyMGxvZ28lMjB0ZWNofGVufDF8fHx8MTc1NTYxOTI2NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    name: "Apitoo",
+    logo: apitoo
   },
   {
-    name: "Amazon",
-    logo: "https://images.unsplash.com/photo-1649734926695-1b1664e98842?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbWF6b24lMjBsb2dvfGVufDF8fHx8MTc1NTYxNjcxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    name: "Loglynx",
+    logo: loglynx
   },
   {
-    name: "Netflix",
-    logo: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXRmbGl4JTIwbG9nb3xlbnwxfHx8fDE3NTU2MTkyNzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    name: "EJCM",
+    logo: ejcm
   },
   {
-    name: "Spotify",
-    logo: "https://images.unsplash.com/photo-1658489958427-325ded050829?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG90aWZ5JTIwbG9nb3xlbnwxfHx8fDE3NTU1OTY0ODR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    name: "Lalves",
+    logo: lalves
   }
 ]
 
@@ -144,11 +150,10 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-border">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
-            Trusted by Leading Companies
+            Alguns dos meus projetos
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            I've had the privilege of working with some of the world's most innovative companies, 
-            delivering high-quality solutions that drive business growth.
+            Aqui estão alguns dos projetos que desenvolvi com criatividade, lógica e uma boa dose de curiosidade.
           </p>
         </div>
 
@@ -159,12 +164,12 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
             {companies.map((company, index) => (
               <div
                 key={`first-${index}`}
-                className="flex-shrink-0 w-32 h-20 mx-4 flex items-center justify-center bg-card border border-border rounded-lg hover:border-vibrant/50 hover:shadow-lg transition-all duration-300 group"
+                className="flex-shrink-0 w-48 h-28 mx-4 flex items-center justify-center bg-card border border-border rounded-lg hover:border-vibrant/50 hover:shadow-lg transition-all duration-300 group"
               >
                 <ImageWithFallback
                   src={company.logo}
                   alt={`${company.name} logo`}
-                  className="max-w-20 max-h-12 object-contain opacity-70 group-hover:opacity-100 transition-opacity filter grayscale group-hover:grayscale-0"
+                  className="max-w-32 max-h-20 object-contain opacity-70 group-hover:opacity-100 transition-opacity filter grayscale group-hover:grayscale-0"
                 />
               </div>
             ))}
@@ -172,12 +177,12 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
             {companies.map((company, index) => (
               <div
                 key={`second-${index}`}
-                className="flex-shrink-0 w-32 h-20 mx-4 flex items-center justify-center bg-card border border-border rounded-lg hover:border-vibrant/50 hover:shadow-lg transition-all duration-300 group"
+                className="flex-shrink-0 w-48 h-28 mx-4 flex items-center justify-center bg-card border border-border rounded-lg hover:border-vibrant/50 hover:shadow-lg transition-all duration-300 group"
               >
                 <ImageWithFallback
                   src={company.logo}
                   alt={`${company.name} logo`}
-                  className="max-w-20 max-h-12 object-contain opacity-70 group-hover:opacity-100 transition-opacity filter grayscale group-hover:grayscale-0"
+                  className="max-w-32 max-h-20 object-contain opacity-70 group-hover:opacity-100 transition-opacity filter grayscale group-hover:grayscale-0"
                 />
               </div>
             ))}
@@ -189,16 +194,16 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-border">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
-            Let's Connect
+            Vamos nos conectar!
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities, creative projects, or just having a chat about technology.
+            Estou sempre aberto a trocar ideias sobre novas oportunidades, projetos criativos, tecnologia ou até mesmo um café.
           </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-6">
           <a
-            href="mailto:luiz@example.com"
+            href="mailto:l.v.alvesjr@gmail.com"
             className="flex items-center gap-3 px-6 py-3 bg-card border border-border rounded-lg hover:border-vibrant hover:shadow-lg transition-all duration-300 group"
           >
             <Mail className="h-5 w-5 text-vibrant group-hover:scale-110 transition-transform" />
@@ -206,7 +211,7 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
           </a>
           
           <a
-            href="https://linkedin.com/in/luiz"
+            href="https://www.linkedin.com/in/luizvitoralves/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-6 py-3 bg-card border border-border rounded-lg hover:border-vibrant hover:shadow-lg transition-all duration-300 group"
@@ -216,7 +221,7 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
           </a>
           
           <a
-            href="https://github.com/luiz"
+            href="https://github.com/LuizVitorAlves/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-6 py-3 bg-card border border-border rounded-lg hover:border-vibrant hover:shadow-lg transition-all duration-300 group"
