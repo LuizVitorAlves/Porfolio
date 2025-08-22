@@ -80,8 +80,8 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 flex items-center min-h-screen lg:min-h-[80vh]">
           <div className="max-w-2xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Olá, me chamo <span className="text-vibrant">Luiz</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6 whitespace-nowrap">
+              Olá, me chamo <span className="text-vibrant">Luiz Alves</span>
             </h1>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary mb-8">
               Sou um Engenheiro de Software apaixonado por criar soluções digitais inovadoras
