@@ -1,6 +1,7 @@
 import { Github, Linkedin, Mail, Palette, Code, Users } from "lucide-react"
 import { Button } from "./ui/button"
 import { ImageWithFallback } from "./figma/ImageWithFallback"
+import banner from "./Images/banner.png";
 
 interface HomePageProps {
   onNavigateToProjects: () => void
@@ -37,20 +38,20 @@ const skills = [
   {
     icon: Palette,
     title: "UX/UI",
-    description: "User-centered design and intuitive interfaces",
-    skills: ["Figma", "Adobe XD", "Prototyping", "User Research"]
+    description: "Design centrado no usuário e interfaces intuitivas",
+    skills: ["Figma", "Design Thinking", "Prototipação", "User Research"]
   },
   {
     icon: Code,
-    title: "Software Engineer",
-    description: "Full-stack development and system architecture",
-    skills: ["React", "TypeScript", "Node.js", "Python"]
+    title: "Engenharia de Software",
+    description: "Desenvolvimento Full Stack e arquitetura de sistemas",
+    skills: ["React", "TypeScript", "Node.js", "Python", "C/C++", "Banco de dados"]
   },
   {
     icon: Users,
     title: "Soft Skills",
-    description: "Leadership and collaborative problem solving",
-    skills: ["Team Leadership", "Communication", "Agile", "Mentoring"]
+    description: "Capacidades pessoais que facilitam conexões, resolução de conflitos e crescimento profissional.",
+    skills: ["Liderança", "Comunicação", "Agilidade", "Colaboração"]
   }
 ]
 
@@ -61,9 +62,9 @@ export function HomePage({ onNavigateToProjects }: HomePageProps) {
       <section className="relative min-h-screen lg:min-h-[80vh] overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <ImageWithFallback
-            src="https://images.unsplash.com/photo-1739593552891-a2b8533c09dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdCUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NTU2MTk3MjR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Professional developer workspace"
+          <img
+            src={banner}
+            alt="Banner"
             className="w-full h-full object-cover object-right"
           />
           {/* Gradient overlay for better text readability */}
