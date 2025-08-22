@@ -1,7 +1,9 @@
-import { Github, Linkedin, Mail, Twitter, Download } from "lucide-react"
+import { Github, Linkedin, Mail, Download } from "lucide-react"
 import { Button } from "./ui/button"
 import { Card, CardContent } from "./ui/card"
 import { ImageWithFallback } from "./figma/ImageWithFallback"
+import perfil from "./Images/Perfil.jpeg";
+import curriculo from './documentos/Luiz Vitor Alves-ES.pdf';
 
 const skills = [
   {
@@ -10,42 +12,36 @@ const skills = [
   },
   {
     category: "Backend",
-    technologies: ["Node.js", "Python", "Express", "Django", "PostgreSQL", "MongoDB"]
+    technologies: ["Node.js", "Python", "C / C++", "Django", "PostgreSQL", "MongoDB"]
   },
   {
-    category: "Mobile",
-    technologies: ["React Native", "Flutter", "Expo", "iOS", "Android"]
+    category: "UX/UI",
+    technologies: ["Design Thinking", "Prototipação", "Research", "Figma", "Análise"]
   },
   {
-    category: "Tools & Others",
-    technologies: ["Git", "Docker", "AWS", "Firebase", "Figma", "Jest"]
+    category: "Ferramentas e outros",
+    technologies: ["Git", "Docker", "AWS", "Notion", "Automação"]
   }
 ]
 
 const socialLinks = [
   {
     platform: "Email",
-    url: "mailto:alex@example.com",
+    url: "mailto:l.v.alvesjr@gmail.com",
     icon: Mail,
-    handle: "alex@example.com"
+    handle: "l.v.alvesjr@gmail.com"
   },
   {
     platform: "LinkedIn",
-    url: "https://linkedin.com/in/alexjohnson",
+    url: "https://www.linkedin.com/in/luizvitoralves/",
     icon: Linkedin,
-    handle: "/in/alexjohnson"
+    handle: "/in/luizvitoralves"
   },
   {
     platform: "GitHub",
-    url: "https://github.com/alexjohnson",
+    url: "https://github.com/LuizVitorAlves/",
     icon: Github,
-    handle: "/alexjohnson"
-  },
-  {
-    platform: "Twitter",
-    url: "https://twitter.com/alexjohnson",
-    icon: Twitter,
-    handle: "@alexjohnson"
+    handle: "/LuizVitorAlves"
   }
 ]
 
@@ -56,10 +52,10 @@ export function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
-            About <span className="text-vibrant">Me</span>
+            Sobre <span className="text-vibrant">Mim</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Learn more about my journey, skills, and what drives me as a developer.
+            Descubra mais sobre minha trajetória, minhas skills e o que me motiva.
           </p>
         </div>
       </section>
@@ -69,34 +65,30 @@ export function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div>
-            <h2 className="text-3xl font-bold text-primary mb-6">My Story</h2>
+            <h2 className="text-3xl font-bold text-primary mb-6">Minha história</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I'm a passionate full-stack developer with over 5 years of experience creating digital solutions 
-                that make a difference. My journey began in computer science, but it was the intersection of 
-                technology and human experience that truly captured my interest.
+                Sou engenheiro de software com formação em matemática, design e ciência da computação, sempre em busca de desafios que me façam evoluir. Minha trajetória começou na matemática na UFRJ, passou por UX/UI e design de produto, e hoje estou mergulhado em desenvolvimento, com os projetos práticos como os da 42 Rio.
               </p>
               <p>
-                I specialize in building modern web applications and mobile apps using cutting-edge technologies. 
-                I believe in writing clean, maintainable code and creating user experiences that are both 
-                beautiful and functional.
+                Adoro criar soluções digitais que equilibrem engenharia sólida com design centrado no usuário. Seja um web app moderno, um sistema que resolve problemas reais ou uma experiência intuitiva, meu objetivo é produzir código limpo, sustentável e que faça sentido.
               </p>
               <p>
-                When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source 
-                projects, or sharing knowledge with the developer community through blog posts and mentoring.
+                Quando não estou codando, provavelmente estou explorando novas tecnologias, aprendendo algo que me desafie ou compartilhando conhecimento com outras pessoas, porque tecnologia faz mais sentido quando é coletiva.
               </p>
               <p>
-                I'm always excited to work on challenging projects that push the boundaries of what's possible 
-                and create meaningful impact for users and businesses alike.
+                Estou empolgado com projetos que conectem inovação, pessoas e impacto, e sempre pronto para o próximo grande desafio.
               </p>
             </div>
             
             <div className="mt-8">
-              <Button className="bg-vibrant hover:bg-vibrant/90 text-vibrant-foreground">
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
+              <Button asChild className="bg-vibrant hover:bg-vibrant/90 text-vibrant-foreground">
+                <a href={curriculo} download className="inline-flex items-center">
+                  <Download className="mr-2 h-4 w-4" />
+                Download currículo
+                </a>
               </Button>
-            </div>
+          </div>
           </div>
 
           {/* Image */}
@@ -104,8 +96,8 @@ export function AboutPage() {
             <div className="relative">
               <div className="w-80 h-96 rounded-2xl overflow-hidden shadow-2xl">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1576558656222-ba66febe3dec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDF8fHx8MTc1NTUwNTIxMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Alex Johnson working"
+                  src={perfil}
+                  alt="Luiz Vitor Alves"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -119,9 +111,9 @@ export function AboutPage() {
       {/* Skills Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-primary mb-4">Skills & Technologies</h2>
+          <h2 className="text-3xl font-bold text-primary mb-4">Habilidades</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Here are the technologies and tools I work with to bring ideas to life.
+            Essas são as tecnologias e ferramentas que uso pra transformar ideias em realidade.
           </p>
         </div>
 
@@ -149,13 +141,13 @@ export function AboutPage() {
       {/* Social Links Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-primary mb-4">Let's Connect</h2>
+          <h2 className="text-3xl font-bold text-primary mb-4">Vamos nos conectar!</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Feel free to reach out through any of these platforms. I'm always open to new opportunities and conversations.
+            Fique à vontade pra me chamar por aqui, estou sempre aberto a trocar ideias e ter novas chances de parceria.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {socialLinks.map((link) => {
             const IconComponent = link.icon
             return (
