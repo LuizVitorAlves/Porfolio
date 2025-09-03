@@ -26,7 +26,6 @@ const projects: Project[] = [
     description: 'Um shell minimalista desenvolvido em C, replicando funcionalidades básicas do Bash. Inclui suporte a execução de comandos, pipes, redirecionamentos, variáveis de ambiente e tratamento de sinais. Conta com builtins como cd, echo, pwd, export, unset, env e exit.',
     image: 'https://images.unsplash.com/photo-1730794545099-14902983739d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzU1NTI1OTY1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     technologies: ['C', 'Unix', 'POSIX', 'Makefile', 'Valgrind'],
-    liveUrl: 'https://ecommerce-demo.com',
     githubUrl: 'https://github.com/LuizVitorAlves/MiniShell',
     category: 'Programação de Sistemas'
   },
