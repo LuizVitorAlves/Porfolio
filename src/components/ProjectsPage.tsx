@@ -21,14 +21,14 @@ interface ProjectsPageProps {
 
 const projects: Project[] = [
   {
-    id: 'ecommerce-platform',
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, shopping cart, and admin dashboard.',
+    id: 'minishell',
+    title: 'Minishell',
+    description: 'Um shell minimalista desenvolvido em C, replicando funcionalidades básicas do Bash. Inclui suporte a execução de comandos, pipes, redirecionamentos, variáveis de ambiente e tratamento de sinais. Conta com builtins como cd, echo, pwd, export, unset, env e exit.',
     image: 'https://images.unsplash.com/photo-1730794545099-14902983739d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzU1NTI1OTY1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    technologies: ['C', 'Unix', 'POSIX', 'Makefile', 'Valgrind'],
     liveUrl: 'https://ecommerce-demo.com',
-    githubUrl: 'https://github.com/alexjohnson/ecommerce',
-    category: 'Web Development'
+    githubUrl: 'https://github.com/LuizVitorAlves/MiniShell',
+    category: 'Programação de Sistemas'
   },
   {
     id: 'task-manager-app',
@@ -78,11 +78,11 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
-            My <span className="text-vibrant">Projects</span>
+            Meus <span className="text-vibrant">Projetos</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Here's a collection of projects I've worked on, ranging from web applications to mobile apps and data visualization tools. 
-            Each project represents a unique challenge and learning opportunity.
+            Aqui está uma coleção de projetos em que trabalhei, que vão desde UX e desenvolvimento web até programação de baixo nível e ferramentas de visualização de dados.
+            Cada projeto trouxe desafios únicos e foi uma grande oportunidade de aprendizado.
           </p>
         </div>
       </section>

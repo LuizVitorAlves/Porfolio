@@ -10,7 +10,6 @@ interface ProjectDetailPageProps {
 }
 
 export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps) {
-  // agora usamos o tipo Project
   const project: Project | undefined = projects.find(p => p.id === projectId)
 
   if (!project) {
