@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react"
+import { ChevronLeft, ChevronRight, ExternalLink, Github, Figma } from "lucide-react"
 import { Button } from "./ui/button"
 import { Card, CardContent } from "./ui/card"
 import { ImageWithFallback } from "./figma/ImageWithFallback"
@@ -12,6 +12,7 @@ interface Project {
   technologies: string[]
   liveUrl?: string
   githubUrl?: string
+  figmaUrl?: string
   category: string
 }
 
@@ -36,7 +37,7 @@ const projects: Project[] = [
     image: 'https://images.unsplash.com/photo-1658953229625-aad99d7603b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzU1NTQzMDQzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     technologies: ['React Native', 'Firebase', 'Redux', 'Expo'],
     liveUrl: 'https://taskmanager-app.com',
-    githubUrl: 'https://github.com/alexjohnson/taskmanager',
+    figmaUrl: 'https://github.com/alexjohnson/taskmanager',
     category: 'Mobile Development'
   },
   {
@@ -164,7 +165,7 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
                         }}
                       >
                         <ExternalLink className="h-3 w-3 mr-1" />
-                        Live Demo
+                        Ver Demo
                       </Button>
                     )}
                     {project.githubUrl && (
@@ -178,7 +179,21 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
                         }}
                       >
                         <Github className="h-3 w-3 mr-1" />
-                        Code
+                        Projeto
+                      </Button>
+                    )}
+                    {project.figmaUrl && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex-1"
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          window.open(project.figmaUrl, '_blank')
+                        }}
+                      >
+                        <Figma className="h-3 w-3 mr-1" />
+                        Projeto
                       </Button>
                     )}
                   </div>
